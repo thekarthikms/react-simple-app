@@ -58,7 +58,7 @@ nav{
 }
 
 .box{
-  height: 50px;
+  height: 10px;
   width: calc(100%/7);
   background-color: #282c34;
   color: white;
@@ -75,7 +75,7 @@ nav{
   background: #000;
   width: 100%;
   padding: 100px;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 #lefter{
@@ -126,11 +126,13 @@ textarea{
 }
 
 .regs{
+  
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
 }
 
 .describe{
@@ -178,6 +180,7 @@ textarea{
   overflow: hidden;
   font-size: 1rem;
   text-align: left ;
+  cursor: pointer;
 }
 
 .itemImg{

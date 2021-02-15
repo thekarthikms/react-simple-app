@@ -13,7 +13,7 @@ let Contact = ()=>{
             <div className="register">
                 <div className="regs" id="lefter">
                 <input type="text" id="over" placeholder="Enter your email"/>
-                <textarea rows="30" id="over" placeholder="Describe your issue"></textarea>
+                <textarea rows="20" id="over" placeholder="Describe your issue"></textarea>
                 <input type="submit" value="Send Mail"/>
                 </div>
             </div>
