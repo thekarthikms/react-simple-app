@@ -11,9 +11,9 @@ let Register = () =>{
             <Box color="#393d45"/>
             <Box color="#282c34"/>
             <div className="register">
-            <div className="regs">
-            <input type="text" placeholder="Enter your email"/>
-            <input type="submit" value="Subscribe to Newsletter"/>
+                <div className="regs">
+                    <input type="text" placeholder="Enter your email"/>
+                     <input type="submit" value="Subscribe to Newsletter"/>
             </div>
         </div>
         </div>
