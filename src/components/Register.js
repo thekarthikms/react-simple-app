@@ -1,6 +1,15 @@
 import Box from "./Box"
+import { userDetail } from "../redux/actions"
+import { connect } from "react-redux"
+import React from "react"
 
-let Register = () =>{
+let Register = (props) =>{
+    let inputMail = React.createRef();
+    let handleClick = () =>{
+        let value = inputMail.current.value
+        props.userDetail(value)
+    }
+
     return(
         <div className="about-page">
             <Box color="#000"/>
@@ -11,13 +20,16 @@ let Register = () =>{
             <Box color="#393d45"/>
             <Box color="#282c34"/>
             <div className="register">
+                <h1 style={{color:"white"}}>Subscribed using {props.userEmail}</h1>
                 <div className="regs">
-                    <input type="text" placeholder="Enter your email"/>
-                     <input type="submit" value="Subscribe to Newsletter"/>
+                    <input type="text" ref={inputMail} placeholder="Enter your email"/>
+                     <input type="submit" onClick={handleClick} value="Subscribe to Newsletter"/>
             </div>
         </div>
         </div>
     )
 }
 
-export default Register
+
+
+export default connect(null,{userDetail})(Register)

@@ -1,6 +1,9 @@
 import Box from "./Box"
 import Item from "./Item"
-let Shop = () =>{
+import { connect } from "react-redux"
+
+let Shop = (props) =>{
+
     return(
         <div className="about-page">
            <Box color="black"/>
@@ -11,17 +14,23 @@ let Shop = () =>{
            <Box color="red"/>
            <Box color="black"/>
            <div className="items">
-               <Item color="red" title="Red item" desc="Price $100"/>
-               <Item color="orange" title="Orange item" desc="Price $100"/>
-               <Item color="gold" title="Gold item" desc="Price $100"/>
-               <Item color="Yellow" title="Yellow item" desc="Price $100"/>
-               <Item color="cyan" title="Cyan item" desc="Price $100"/>   
-               <Item color="blue" title="Blue item" desc="Price $100"/>
-               <Item color="darkblue" title="Dark Blue item" desc="Price $100"/>
-               <Item color="indigo" title="Indigo item" desc="Price $100"/>
+               <Item color="black" title="Color Black" desc="Price $100"/>
+               <Item color="midnightblue" title="Color Midnight Blue" desc="Price $100"/>
+               <Item color="red" title="Color Red" desc="Price $100"/>
+               <Item color="gold" title="Color Gold" desc="Price $100"/>
+               
            </div>
+           <h1>You have subscribed to our mailing list using <span style={{
+               color:"blue"
+           }}>{props.userEmail}</span></h1>
         </div>
     )
 }
 
-export default Shop
+let mapStateToProps = (state) =>{
+    return state
+}
+
+
+
+export default connect(mapStateToProps,null)(Shop)

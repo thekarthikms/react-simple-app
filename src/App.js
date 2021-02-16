@@ -6,9 +6,12 @@ import Register from './components/Register'
 import Contact from './components/Contact'
 import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
 
+import store from "./redux/store"
+import { Provider } from "react-redux"
 
 function App() {
   return (
+  <Provider store={store} >
     <div className="App">
       <header className="App-header">
         <Router>
@@ -23,6 +26,7 @@ function App() {
        </Router>
       </header>
     </div>
+    </Provider>
   );
 }
 
