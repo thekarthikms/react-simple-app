@@ -1,7 +1,7 @@
-import { createStore } from "redux"
+import { createStore,combineReducers } from "redux"
 
-import {res} from "./reducers"
+import {res,cart} from "./reducers"
 
-const store  = createStore(res)
+const store  = createStore(combineReducers({res,cart}))
 
 export default store

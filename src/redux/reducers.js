@@ -1,7 +1,9 @@
 let initialState = {
-    userEmail : ''
+    userEmail : '',
 }
-
+let cartState = {
+    cartCount:0
+}
 
 export const res = (state = initialState,action) => {
     switch(action.type){
@@ -11,6 +13,26 @@ export const res = (state = initialState,action) => {
                 ...state,
                 userEmail : content
             }}
+        
+        default:
+            return state
+    }
+}
+
+export const cart = (state = cartState,action) =>{
+    switch(action.type){
+        case "ADD TO CART":{
+            return {
+                ...state,
+                cartCount:state.cartCount+1
+            }
+        }
+        case "REMOVE FROM CART":{
+            return{
+                ...state,
+                cartCount:state.cartCount-1
+            }
+        }
         default:
             return state
     }
